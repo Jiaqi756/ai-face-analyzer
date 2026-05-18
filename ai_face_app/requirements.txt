@@ -1,1 +1,9 @@
-
+streamlit
+numpy
+opencv-python-headless
+Pillow
+matplotlib
+mediapipe
+insightface
+onnxruntime
+scikit-learn
