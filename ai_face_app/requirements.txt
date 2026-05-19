@@ -8,3 +8,5 @@ insightface==0.7.3
 onnxruntime==1.17.1
 scikit-learn==1.4.2
 protobuf==3.20.3
+torch
+git+https://github.com/openai/CLIP.git
