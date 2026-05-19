@@ -146,17 +146,15 @@ if uploaded_file is not None:
     # 画框
     for face in faces:
 
+    # 新版 insightface
+    if isinstance(face, dict):
+        bbox = face["bbox"].astype(int)
+
+    # 旧版 insightface
+    else:
         bbox = face.bbox.astype(int)
 
-        x1, y1, x2, y2 = bbox
-
-        cv2.rectangle(
-            image_bgr,
-            (x1, y1),
-            (x2, y2),
-            (255, 0, 255),
-            3
-        )
+    x1, y1, x2, y2 = bbox
 
     # ================= Landmark =================
 
