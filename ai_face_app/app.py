@@ -143,18 +143,17 @@ if uploaded_file is not None:
 
         faces = detect_faces(image_np)
 
-    # 画框
     for face in faces:
 
-    # 新版 insightface
-    if isinstance(face, dict):
-        bbox = face["bbox"].astype(int)
-
-    # 旧版 insightface
-    else:
-        bbox = face.bbox.astype(int)
-
-    x1, y1, x2, y2 = bbox
+        # 新版 insightface
+        if isinstance(face, dict):
+            bbox = face["bbox"].astype(int)
+    
+        # 旧版 insightface
+        else:
+            bbox = face.bbox.astype(int)
+    
+        x1, y1, x2, y2 = bbox
 
     # ================= Landmark =================
 
